@@ -1,0 +1,93 @@
+.Header {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    justify-content: center;
+    position: absolute;
+    background-color: rgba(23, 26, 28, 0.445);
+    color: var(--White);
+}
+
+.center {
+    max-width: 1170px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+        font-size: 2rem;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        a {
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+    }
+}
+
+.navBtn {
+    display: none;
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--Dourado);
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.8rem;
+}
+
+@media screen and (max-width:506px) {
+    .navBtn {
+        display: flex;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .center {
+        width: 90%;
+
+        nav {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: var(--Cinza);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            transition: 1s;
+            transform: translateY(-100vh);
+
+            a {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .Header .responsiveNav {
+        transform: none;
+
+    }
+
+    .navCloseBtn {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+}
