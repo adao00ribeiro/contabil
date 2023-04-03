@@ -8,16 +8,19 @@
 .center {
     max-width: 1170px;
     width: 80%;
+    height: 100%;
     margin: auto;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .group {
     width: 60%;
-    height: 100vh;
-    padding-top: 10rem;
+
     color: var(--White);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 1rem;
 
     h1 {
@@ -49,14 +52,6 @@
 
 
 @media screen and (max-width:720px) {
-    .container {
-        height: 50vh;
-    }
-
-    .center {
-        width: 90%;
-        height: 100%;
-    }
 
     .group {
         display: flex;
@@ -67,7 +62,7 @@
         padding-top: 3rem;
 
         h1 {
-            text-align: left;
+            text-align: center;
             width: 100%;
             font-family: 'Playfair Display', sans-serif;
             font-weight: 400;
@@ -75,6 +70,7 @@
         }
 
         span {
+            text-align: justify;
             color: var(--Translucent-White);
             font-family: 'Lato', sans-serif;
             font-weight: 400;
